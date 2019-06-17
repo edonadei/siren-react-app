@@ -7,7 +7,24 @@
 }
 
 body{
-  
+    font-family: "Karla", sans-serif !important;
+    background: var(--mainWhite) !important;
+    color:var(--mainDark) !important;
+}
+
+.text-title{
+    font-family: 'Karla', cursive;
+    letter-spacing: 0.3 rem;
+    text-transform: up;
+
+}
+
+.text-blue{
+  color: var(--mainBlue);
+}
+
+.text-light{
+  color: var(--lightBlue);
 }
 
 .App {
