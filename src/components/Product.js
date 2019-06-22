@@ -5,6 +5,7 @@ class Product extends Component {
         return (
             <div>
                 <h3> Hello from product </h3>
+                
             </div>
         );
     }

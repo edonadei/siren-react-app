@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Cart from "@material-ui/icons/ShoppingCart";
-import Button from "@material-ui/core/Button";
 import logo from "../logo.svg";
 import styled from "styled-components"
+import {ButtonContainer} from './Button'
 
 class Navbar extends Component {
   render() {
@@ -21,12 +21,12 @@ class Navbar extends Component {
         </ul>
 
         <Link to="/cart" className="ml-auto">
-          <Button variant="outlined" color="primary">
+          <ButtonContainer>
             <span className="mr-2">
               <Cart />
             </span>
             My cart
-          </Button>
+          </ButtonContainer>
         </Link>
       </NavWrapper>
     );
@@ -41,5 +41,6 @@ background: var(--mainBlue);
   text-transform:capitalize !important;
 }
 `;
+
 
 export default Navbar;
