@@ -17,11 +17,43 @@ class Details extends Component {
                                 <h1>{title}</h1>
                             </div>
                             {/* end title */}
-
                             {/* product info */}
-                            
+                            <div className="row">
+                                <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                                    <img src={img} className="img-fluid" alt="product" />
+                                </div>
+                                {/* product text */}
+                                <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                                    <h2>model : {title}</h2>
+                                    <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
+                                        made by : <span className="text-uppercase">
+                                            {company}
+                                        </span>
+                                    </h4>
+                                    <h4 className="text-blue">
+                                        <strong>
+                                            price : <span>$</span>
+                                            {price}
+                                        </strong>
+                                    </h4>
+                                    <p className="text-capitalize font-weight-bold mt-3">
+                                        some info about product:
+                                    </p>
+                                    <p className="text-muted lead">
+                                        {info}
+                                    </p>
+                                    <div className="">
+                                        {/* buttons */}
+                                        <Link to ='/'>
+                                            <ButtonContainer>back to products</ButtonContainer>
+                                        </Link>
+                                        <Link to = '/cart'>
+                                            <ButtonContainer>add to cart</ButtonContainer>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
                             {/* end product info */}
-                            
                         </div>
                     )
                 }}
