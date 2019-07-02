@@ -8,7 +8,7 @@ class Details extends Component {
         return (
             <ProductConsumer>
                 {value => {
-                    const { id, company, img, info, price, title, inCard } =
+                    const { id, company, img, info, price, title, inCart } =
                         value.detailProducts;
                     return (
                         <div className="container py-5">
@@ -44,20 +44,28 @@ class Details extends Component {
                                     </p>
                                     <div className="">
                                         {/* buttons */}
-                                        <Link to ='/'>
+                                        <Link to='/'>
                                             <ButtonContainer>back to products</ButtonContainer>
                                         </Link>
-                                        <Link to = '/cart'>
-                                            <ButtonContainer>add to cart</ButtonContainer>
-                                        </Link>
+                                        {/* Here we add the props cart to the component to use the conditionnal styling*/}
+                                        <ButtonContainer 
+                                            cart
+                                            disabled={inCart ? true : false}
+                                            onClick={() => {
+                                                value.addToCart(id)
+                                            }}
+                                        >
+                                            {inCart ? 'incart' : "add to cart"}
+                                        </ButtonContainer>
                                     </div>
                                 </div>
                             </div>
                             {/* end product info */}
                         </div>
                     )
-                }}
-            </ProductConsumer>
+                }
+                }
+            </ProductConsumer >
         );
     }
 }

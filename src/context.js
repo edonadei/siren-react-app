@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { storeProducts, detailProducts, detailProduct } from "./data";
+import { storeProducts, detailProduct } from "./data";
 
 const ProductContext = React.createContext();
 // Provider
@@ -8,12 +8,12 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
   state = {
     products: [],
-    detailProducts: detailProduct
+    detailProduct: detailProduct
   };
 
   // Used to give to pass the copies, not the actual values
-  componentDidMount(){
-      this.setProducts();
+  componentDidMount() {
+    this.setProducts();
   }
 
   setProducts = () => {
@@ -23,18 +23,25 @@ class ProductProvider extends Component {
       const singleItem = { ...item };
       tempProducts = [...tempProducts, singleItem];
     });
-
     this.setState(() => {
-      return { products:tempProducts };
+      return { products: tempProducts };
     });
   };
 
-  handleDetail = () => {
-    console.log("hello from detail");
+  getItem = (id) => {
+    const product = this.state.products.find(item => item.id === id);
+    return product;
+  }
+
+  handleDetail = (id) => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { detailProduct: product };
+    });
   };
 
-  addToCart = () => {
-    console.log("hello from add to cart");
+  addToCart = (id) => {
+    console.log(`hello from add to cart.id is ${id}`);
   };
 
   render() {
