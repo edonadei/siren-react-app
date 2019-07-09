@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Cart from "@material-ui/icons/ShoppingCart";
 import logo from "../logo.svg";
-import styled from "styled-components"
-import {ButtonContainer} from './Button'
+import styled from "styled-components";
+import { ButtonContainer } from "./Button";
 
 class Navbar extends Component {
   render() {
@@ -34,13 +34,12 @@ class Navbar extends Component {
 }
 
 const NavWrapper = styled.nav`
-background: var(--mainBlue);
-.nav-link {
-  color: var(--mainWhite) !important;
-  font-size: 1.3rem;
-  text-transform:capitalize !important;
-}
+  background: var(--mainBlue);
+  .nav-link {
+    color: var(--mainWhite) !important;
+    font-size: 1.3rem;
+    text-transform: capitalize !important;
+  }
 `;
-
 
 export default Navbar;

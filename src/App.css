@@ -1,29 +1,28 @@
-:root{
-  --mainBlue:#2a2a72;
-  --lightBlue:#009ffd;
-  --mainWhite:#f3f3f3;
-  --mainDark:#232528;
-  --mainYellow:#ffa400;
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
 }
 
-body{
-    font-family: "Karla", sans-serif !important;
-    background: var(--mainWhite) !important;
-    color:var(--mainDark) !important;
+body {
+  font-family: "Karla", sans-serif !important;
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
 }
 
-.text-title{
-    font-family: 'Karla', cursive;
-    letter-spacing: 0.3 rem;
-    text-transform: up;
-
+.text-title {
+  font-family: 'Karla', cursive;
+  letter-spacing: 0.3 rem;
+  text-transform: up;
 }
 
-.text-blue{
+.text-blue {
   color: var(--mainBlue);
 }
 
-.text-light{
+.text-light {
   color: var(--lightBlue);
 }
 
