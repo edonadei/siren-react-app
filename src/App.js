@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
-import Cart from "./components/Cart";
+import Cart from "./components/cart";
 import ProductList from "./components/ProductList";
 import Default from "./components/Default";
 import Details from "./components/Details";
@@ -21,7 +21,7 @@ function App() {
       </Switch>
       <Modal />
     </React.Fragment>
-  );
+  )
 }
 
 export default App;
