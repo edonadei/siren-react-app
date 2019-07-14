@@ -1,5 +1,4 @@
 import React from 'react'
-import { width } from '@material-ui/system';
 
 export default function CartItem({ item, value }) {
     const { id, title, img, price, total, count } = item;
