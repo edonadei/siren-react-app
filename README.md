@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Online website: https://react-ecommerce-edonadei.netlify.com/
 
 ## What is this project
 A little web project to train my React skills @Efrei<br>
