@@ -1,8 +1,11 @@
-Online website: https://react-ecommerce-edonadei.netlify.com/
-
 ## What is this project
 A little web project to train my React skills @Efrei<br>
+The test app is hosted on netlify: Online website: https://react-ecommerce-edonadei.netlify.com/
 It's basically a **e-commerce** website built with a Bootstrap & React frond-end.
+
+### Paypal Sandbox ID
+- ID: emrick.donadei-buyer@hotmail.fr 
+- PW: efrei2019
 
 ## Prerequisites
 - Node.Js to run everything
