@@ -6,6 +6,7 @@ import Cart from "./components/cart";
 import ProductList from "./components/ProductList";
 import Default from "./components/Default";
 import Details from "./components/Details";
+import Admin from "./components/admin/Admin"
 import { Switch, Route } from "react-router-dom";
 import Modal from './components/Modal'
 
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={ProductList} />
         <Route path="/details" component={Details} />
         <Route path="/cart" component={Cart} />
+        <Route path="/admin" component={Admin} />
         <Route component={Default} />
       </Switch>
       <Modal />

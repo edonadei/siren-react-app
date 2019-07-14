@@ -194,9 +194,9 @@ class ProductProvider extends Component {
           clearCart: this.clearCart
         }}
       >
-        {this.props.children};
+        {this.props.children}
       </ProductContext.Provider>
-    );
+    )
   }
 }
 
