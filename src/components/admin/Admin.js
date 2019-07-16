@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { ProductConsumer } from '../../context'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import { AuthConsumer } from '../../contextAuth';
+import Button from '@material-ui/core/Button';
 
 const cellEditProp = {
     mode: 'dbclick'
@@ -42,6 +44,24 @@ export default class Admin extends Component {
                                 )
                             }}
                         </ProductConsumer>
+                        <AuthConsumer>
+                            {contextValue => {
+                                return (
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="ml-auto">
+                                            <Button onClick={contextValue.disconnect}>
+                                                Disconnect
+                                            </Button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                )
+                            }}
+                        </AuthConsumer>
+
+
                     </div>
                 </div>
             </div>
