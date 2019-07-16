@@ -7,6 +7,10 @@ It's basically a **e-commerce** website built with a Bootstrap & React frond-end
 - ID: emrick.donadei-buyer@hotmail.fr 
 - PW: efrei2019
 
+### Webite admin ID
+- ID: admin
+- PW: admin
+
 ## Prerequisites
 - Node.Js to run everything
 - Git SCM to clone the repo
