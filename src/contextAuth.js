@@ -7,12 +7,20 @@ class AuthProvider extends Component {
     isAuthenticated: false
   };
 
-  componentDidMount() {
-
+  checkForAuthentication = (id, password) => {
+    let idToCompare = id.ID;
+    let passwordToCompare = password.password;
+    if (idToCompare === "admin" && passwordToCompare === "admin") {
+      this.setState(() => {
+        return { isAuthenticated: true };
+      })
+    }
   }
 
-  checkForAuthentication = () => {
-    console.log("hello from check for authentication")
+  disconnect = () => {
+    this.setState(() => {
+      return { isAuthenticated: false };
+    })
   }
 
   render() {
@@ -21,6 +29,8 @@ class AuthProvider extends Component {
         value={{
           ...this.state,
           // method: this.method, etc...
+          checkForAuthentication: this.checkForAuthentication,
+          disconnect: this.disconnect
         }}
       >
         {this.props.children};

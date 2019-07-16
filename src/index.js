@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import { ProductProvider } from './context';
+import { AuthProvider } from './contextAuth'
 
 const theme = createMuiTheme({
   palette: {
@@ -25,11 +26,13 @@ const theme = createMuiTheme({
 ReactDOM.render(
 
   <MuiThemeProvider theme={theme}>
-    <ProductProvider>
-      <Router>
-        <App />
-      </Router>
-    </ProductProvider>
+    <AuthProvider>
+      <ProductProvider>
+        <Router>
+          <App />
+        </Router>
+      </ProductProvider>
+    </AuthProvider>
   </MuiThemeProvider>
   ,
   document.getElementById('root'));

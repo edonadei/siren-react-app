@@ -18,6 +18,11 @@ class Navbar extends Component {
               Phones
             </Link>
           </li>
+          <li className="nav-item ml-5 d-none d-sm-block">
+            <Link to="/admin" className="nav-link">
+              Admin
+            </Link>
+          </li>
         </ul>
 
         <Link to="/cart" className="ml-auto">
